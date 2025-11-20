@@ -305,18 +305,33 @@
 
           <!-- PROJECT: AFRICA DEVELOPMENT DASHBOARD 2025 -->
                     <!-- PROJECT: AFRICA DEVELOPMENT DASHBOARD 2025 – INSTANT LOAD VERSION -->
+                   <!-- PROJECT: AFRICA DEVELOPMENT DASHBOARD 2025 – INSTANT AUTO-PLAY VERSION -->
           <div class="card-project">
             <div class="ribbon-tag data">TABLEAU</div>
-            
-            <!-- INSTANT-LOADED THUMBNAIL WITH PLAY BUTTON -->
-            <div class="video-thumbnail-wrapper" style="position:relative; cursor:pointer; border-radius:12px 12px 0 0; overflow:hidden;" onclick="openAfricaVideoModal()">
-              <img src="./assets/images/africa-poster.jpg" 
-                   alt="Africa Development Dashboard 2025" 
-                   style="width:100%; height:220px; object-fit:cover; display:block;">
-              <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); 
-                          width:68px; height:68px; background:rgba(0,0,0,0.68); border-radius:50%; 
-                          display:flex; align-items:center; justify-content:center; pointer-events:none;">
-                <svg width="32" height="36" viewBox="0 0 24 24" fill="white">
+
+            <!-- FAST AUTO-PLAY VIDEO (loads instantly) -->
+            <div style="position:relative; overflow:hidden; border-radius:12px 12px 0 0; background:#000;">
+              <!-- 1. Tiny compressed poster as background fallback -->
+              <div style="position:absolute; inset:0; background:url('./assets/images/africa-poster.jpg') center/cover no-repeat; z-index:1;"></div>
+              
+              <!-- 2. Real video – tiny file + optimized settings = instant start -->
+              <video width="100%" height="220" 
+                     autoplay loop muted playsinline
+                     preload="auto"
+                     poster="./assets/images/africa-poster.jpg"
+                     style="position:relative; z-index:2; width:100%; height:220px; object-fit:cover; display:block;"
+                     onclick="openAfricaVideoModal()">
+                <source src="./assets/videos/table1.mp4" type="video/mp4">
+                <!-- Fallback: tiny optimized version (rename your compressed file to this) -->
+                <source src="./assets/videos/table1-optimized.mp4" type="video/mp4">
+              </video>
+
+              <!-- Optional subtle play icon overlay (disappears after 1s) -->
+              <div id="play-icon-overlay" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); 
+                   width:64px; height:64px; background:rgba(0,0,0,0.5); border-radius:50%; 
+                   display:flex; align-items:center; justify-content:center; z-index:3; pointer-events:none;
+                   opacity:1; transition:opacity 1.5s;">
+                <svg width="28" height="32" viewBox="0 0 24 24" fill="white">
                   <path d="M8 5v14l11-7z"/>
                 </svg>
               </div>
