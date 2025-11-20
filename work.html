@@ -1,5 +1,3 @@
-<!-- FULL UPDATED CODE WITH FIXED LIGHTBOX ARROWS -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,258 +10,152 @@
   <meta name="msapplication-tap-highlight" content="no">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
   <link href="./assets/favicon.ico" rel="icon">
-  <title>Newton Karanja – Works</title>
-  <link rel="icon" type="image/x-icon" href="./assets/images/star.png">
+  <title>Newton Karanja</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/sys6.png">
   <link href="./main.3f6952e4.css" rel="stylesheet">
-
   <style>
-    /* Desktop Enhancements */
-    @media (min-width: 992px) {
-      .card-project {
-        border-radius: 12px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-        transition: all 0.35s ease;
-      }
-      .card-project:hover {
-        transform: translateY(-12px);
-        box-shadow: 0 16px 32px rgba(0,0,0,0.18);
-      }
-      .card-project img {
-        height: 260px !important;
-        object-fit: cover;
-      }
-      .card-project-body {
-        padding: 1.8rem !important;
-      }
-      .card-project-body h3 {
-        font-size: 1.5rem !important;
-        font-weight: 700 !important;
-        letter-spacing: -0.5px;
-        color: #1a1a1a;
-      }
-      .card-project-body p.text-muted {
-        font-size: 1rem !important;
-        font-weight: 600 !important;
-        color: #333;
-        letter-spacing: -0.3px;
-      }
-      .card-project-body p.description {
-        font-size: 1.05rem !important;
-        font-weight: 500 !important;
-        color: #2d2d2d;
-        line-height: 1.55;
-      }
-      .card-project-body .btn {
-        font-size: 0.95rem !important;
-        padding: 0.6rem 1.3rem !important;
-        font-weight: 600 !important;
-      }
-    }
-
-    /* Base Card Styles */
-    .card-project {
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    .card-project:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-    }
-    .card-project img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .card-project-body {
-      padding: 1.4rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    .card-project-body h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #222;
-    }
-    .card-project-body p.text-muted {
-      font-size: 0.9rem;
-      color: #666;
-      margin: 0 0 0.8rem;
-      font-weight: 500;
-    }
-    .card-project-body p.description {
-      font-size: 0.95rem;
-      color: #444;
-      margin-bottom: 1rem;
-      flex-grow: 1;
-    }
-    .card-project-body .btn {
-      font-size: 0.85rem;
-      padding: 0.5rem 1rem;
-      margin-top: auto;
-      align-self: flex-start;
-      font-weight: 600;
-    }
-    .section-container-spacer { margin-bottom: 3rem; }
-
-    /* Tagline */
-    .tagline {
-      font-weight: 550 !important;
-      font-size: 1.08rem !important;
-      color: #181818 !important;
-      letter-spacing: -0.35px !important;
-      margin-top: 0.6rem !important;
-      line-height: 1.5 !important;
-    }
-
-    /* Buttons */
-    .btn-outline {
-      border: 1.5px solid #333;
-      color: #333;
-      background: transparent;
-      text-decoration: none;
-    }
-    .btn-outline:hover {
-      background: #333;
-      color: #fff;
-    }
-
-    /* Tech Badges */
-    .tech-stack {
-      margin: 0.8rem 0 1rem;
-      font-size: 0.8rem;
-      line-height: 1.6;
-    }
-    .badge {
-      display: inline-block;
-      background:  #808080;
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.78rem;
-      padding: 0.35rem 0.65rem;
-      margin: 0.15rem 0.25rem;
-      border-radius: 6px;
-      letter-spacing: 1px;
-    }
-    .badge:hover {
-      background: black;
-    }
-    @media (min-width: 992px) {
-      .tech-stack { font-size: 0.95rem; }
-      .badge { font-size: 0.82rem; padding: 0.4rem 0.75rem; }
-    }
-
-    /* LIGHTBOX */
-    .lightbox {
+    .card-project{position:relative;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.1);transition:all .35s ease;height:100%;display:flex;flex-direction:column}
+    .card-project:hover{transform:translateY(-12px);box-shadow:0 16px 32px rgba(0,0,0,.18)}
+    .ribbon-tag{position:absolute;top:12px;right:-38px;width:140px;background:#e11d48;color:white;text-align:center;padding:6px 0;font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:1.9px;transform:rotate(45deg);box-shadow:0 4px 8px rgba(0,0,0,.2);z-index:10}
+    .ribbon-tag::before,.ribbon-tag::after{content:'';position:absolute;top:0;width:0;height:0;border:8px solid transparent}
+    .ribbon-tag::before{left:-16px;border-right-color:#99141d}
+    .ribbon-tag::after{right:-16px;border-left-color:#99141d}
+    .ribbon-tag.dev{background:#0d6efd}.ribbon-tag.dev::before{border-right-color:#084298}.ribbon-tag.dev::after{border-left-color:#084298}
+    .ribbon-tag.data{background:#10b981}.ribbon-tag.data::before{border-right-color:#0a6b4d}.ribbon-tag.data::after{border-left-color:#0a6b4d}
+    .card-project img,.card-project video{width:100%;height:220px;object-fit:cover}
+    .clickable-thumbnail{cursor:pointer}
+    .card-project-body{padding:1.6rem;flex-grow:1;display:flex;flex-direction:column}
+    .card-project-body h3{margin:0 0 .5rem;font-size:1.65rem;font-weight:700;color:#1a1a1a}
+    .tech-stack{margin:.8rem 0 1rem}
+    .badge{display:inline-block;background:#808080;color:#fff;font-weight:600;font-size:.88rem;padding:.35rem .7rem;margin:.15rem .25rem;border-radius:6px}
+    .description{font-size:1.1rem;color:#2d2d2d;line-height:1.58;flex-grow:1}
+    .btn-group{margin-top:-3rem;display:flex;gap:.9rem;flex-wrap:wrap}
+    .btn{font-size:.88rem;padding:.55rem 1.2rem;font-weight:600}
+    .btn-primary{background:#0d6efd;border:none;color:white}
+    .btn-outline{border:1.5px solid #333;color:#333;background:transparent}
+    .btn-outline:hover{background:#333;color:#fff}
+    .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-bottom:4rem}
+    .lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.94);display:flex;justify-content:center;align-items:center;z-index:9999;padding:1rem;opacity:0;visibility:hidden;transition:.35s}
+    .lightbox.active{opacity:1;visibility:visible}
+    .lightbox-inner{display:flex;flex-direction:column;align-items:center;max-width:95%;text-align:center}
+    .lightbox-content{max-width:100%;max-height:70vh;border-radius:12px;box-shadow:0 15px 40px rgba(0,0,0,.5);object-fit:contain;margin-bottom:1rem}
+    .caption{color:#e0e0e0;font-size:1rem;margin-top:.5rem;padding:0 1rem}
+    .close-btn{position:absolute;top:15px;right:15px;color:#fff;font-size:2.2rem;background:rgba(0,0,0,.7);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10000}
+    .close-btn:hover{background:#000}
+    .prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.7);width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10000;transition:.3s}
+    .prev:hover,.next:hover{background:#000}
+    .prev{left:15px}
+    .next{right:15px}
+    .prev svg,.next svg{width:26px;height:26px;fill:white}
+    .modal-backdrop{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);display:flex;justify-content:center;align-items:center;z-index:9999;padding:1rem;display:none}
+    .modal-content{position:relative;max-width:900px;width:100%;background:#111;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+    .video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+    .video-container video{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+    .modal-caption{color:#aaa;text-align:center;padding:1rem;font-size:.9rem}
+    
+    /* SQL MODAL - FIXED & BEAUTIFUL */
+    .sql-modal {
+      display: none;
       position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.92);
       z-index: 9999;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.94);
-      display: flex;
       justify-content: center;
       align-items: center;
       opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.35s ease, visibility 0.35s ease;
-      padding: 1rem;
-      box-sizing: border-box;
+      transition: opacity 0.4s ease;
     }
-    .lightbox.active {
+    .sql-modal.active {
+      display: flex;
       opacity: 1;
-      visibility: visible;
     }
-
-    .lightbox-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 95%;
-      text-align: center;
+    .sql-modal-content {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 16px;
+      max-width: 1100px;
+      width: 92%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+      position: relative;
     }
-
-    .lightbox-content {
-      max-width: 100%;
-      max-height: 70vh;
-      width: auto;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-      object-fit: contain;
-      margin-bottom: 1rem;
-    }
-
-    .caption {
-      color: #e0e0e0;
-      font-size: 1rem;
-      font-weight: 500;
-      letter-spacing: -0.3px;
-      margin-top: 0.5rem;
-      padding: 0 1rem;
-    }
-
-    .close-btn {
+    .sql-close {
       position: absolute;
-      top: 15px; right: 15px;
-      color: #fff;
-      font-size: 2.2rem;
-      background: rgba(0,0,0,0.7);
-      width: 44px; height: 44px;
+      top: 12px;
+      right: 16px;
+      font-size: 2.4rem;
+      color: #333;
+      background: rgba(255,255,255,0.9);
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      z-index: 10;
+      font-weight: bold;
     }
-    .close-btn:hover { background: rgba(0,0,0,1); }
-
-    /* FIXED ARROWS */
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: black;
-      opacity: 0.75;
-      width: 54px; height: 54px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: 0.3s;
+    .sql-close:hover {
+      background: #e0e0e0;
+      transform: scale(1.1);
     }
-    .prev:hover, .next:hover { opacity: 1; }
-
-    .prev { left: 15px; }
-    .next { right: 15px; }
-
-    .prev svg, .next svg {
-      width: 26px;
-      height: 26px;
-      fill: white;
+    .sql-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+      margin: 2rem 0;
     }
-
-    @media (max-width: 768px) {
-      .prev, .next {
-        width: 46px; height: 46px;
+    @media (min-width: 768px) {
+      .sql-grid {
+        grid-template-columns: 1fr 1fr 1fr;
       }
-      .prev svg, .next svg { width: 22px; height: 22px; }
     }
-	.description {
-        font-weight: 525;
+    .code-block {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 1.4rem;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 0.92rem;
+      border-left: 5px solid #10b981;
+      height: 100%;
     }
-
+    .code-block h4 {
+      color: #10b981;
+      margin: 0 0 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .impact-box {
+      background: #f0fdf4;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border-left: 5px solid #10b981;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      color: #065f46;
+    }
+    @media (max-width:768px){.prev,.next{width:46px;height:46px}.prev svg,.next svg{width:22px;height:22px}}
+	p.description {
+    font-weight: 500 !important;
+  }
+  p.tagline {
+    font-weight: 500 !important;
+  }
+  /* Add this anywhere in your */
+.navbar-nav > li > a {
+  font-weight: 500 !important;
+}
   </style>
 </head>
 <body>
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
 
 <!-- HEADER -->
 <header>
@@ -275,13 +167,9 @@
       <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a href="./index.html">01 : Home</a></li>
-          <li><a href="./works.html" class="active">02 : Works</a></li>
+          <li><a href="./works.html" class="active"><b>02 : Works</b></a></li>
           <li><a href="./about.html">03 : About me</a></li>
           <li><a href="./contact.html">04 : Contact</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-          <li><a href="">001</a></li><li><a href="">002</a></li><li><a href="">003</a></li>
-          <li><a href="">004</a></li><li><a href="">005</a></li><li><a href="">006</a></li>
         </ul>
       </div>
     </div>
@@ -296,77 +184,157 @@
         <h1 class="h2">002 : My Works</h1>
         <p class="tagline">Full Stack • Data Analytics • Real-World Impact</p>
       </div>
-
       <div class="col-xs-12">
-        <div class="row">
-
-          <!-- PROJECT 1 -->
-          <div class="col-xs-12 col-md-4">
-            <div class="card-project">
-              <img src="./assets/images/auto.png">
-              <div class="card-project-body">
-                <h3>Unity Auto Spares</h3>
-                <p class="tech-stack">
-                  <span class="badge">WordPress</span>
-                  <span class="badge">WooCommerce</span>
-                  <span class="badge">PHP</span>
-                  <span class="badge">MySQL</span>
-                  <span class="badge">HTML5</span>
-                  <span class="badge">CSS3</span>
-                  <span class="badge">SEO</span>
-                </p>
-                <p class="description">Live e-commerce store for auto spare parts in Kenya. Custom theme, product catalog, secure checkout, mobile-responsive, and SEO-optimized</p>
-                <div style="margin-top: 1rem; display:flex; gap:0.5rem;">
-                  <a href="https://unityautospares.co.ke" target="_blank" class="btn btn-primary btn-sm">Live Site</a>
-                  <a href="#" class="btn btn-outline btn-sm" onclick="openGallery(['unity/home.jpg','unity/product.png','unity/checkout.png']);return false;">View Screenshots</a>
-                </div>
+        <div class="project-grid">
+          <!-- PROJECT 1: UNITY AUTO SPARES -->
+          <div class="card-project">
+            <div class="ribbon-tag dev">Web App</div>
+            <img src="./assets/images/auto.png" alt="Unity Auto Spares">
+            <div class="card-project-body">
+              <h3>Unity Auto Spares</h3>
+              <p class="tech-stack">
+                <span class="badge">WordPress</span>
+                <span class="badge">WooCommerce</span>
+                <span class="badge">HTML5</span>
+                <span class="badge">CSS3</span>
+                <span class="badge">PHP</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">SEO</span>
+              </p>
+              <p class="description">Live e-commerce store for auto spare parts in Kenya. Custom theme, product catalog, secure checkout, mobile-responsive, and SEO-optimized</p>
+              <div class="btn-group">
+                <a href="https://unityautospares.co.ke" target="_blank" class="btn btn-primary">Live Site</a>
+                <a href="#" class="btn btn-outline" onclick="openGallery(['unity/home.jpg','unity/product.png','unity/checkout.png']);return false;">Screenshots</a>
               </div>
             </div>
           </div>
 
-          <!-- PROJECT 2 -->
-          <!-- PROJECT 2 – UNITY POS SYSTEM -->
-<div class="col-xs-12 col-md-4">
-  <div class="card-project">
-    <img src="./assets/images/pos.png" alt="Unity POS System Dashboard">
-    <div class="card-project-body">
-      <h3>POS and Inventory System / App</h3>
-      <p class="tech-stack">
-        <span class="badge">PHP</span>
-        <span class="badge">MySQL</span>
-	   <span class="badge">JS</span>
-        <span class="badge">Bootstrap</span>
-		<span class="badge">HTML / CSS</span>
-        <span class="badge">Chart.js</span>
-        <span class="badge">manifest</span>
-		<span class="badge">Excel Export</span>
-        <span class="badge">Responsive</span>
-      </p>
-      <p class="description">Full-featured POS and inventory for Kenyan retail. Tracks sales, stock, profit, and generates reports. Used by local shop in Nairobi.</p>
-      <div class="card-project-footer" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        <a href="https://your-pos-domain.com" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
-        <a href="#" class="btn btn-outline btn-sm" onclick="openGallery(['unity/pos.png','pos/sales.jpg','pos/report.jpg','pos/mobile.jpg','pos/profit.jpg']); return false;">View Screenshots</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-          <!-- PROJECT 3 -->
-          <div class="col-xs-12 col-md-4">
-            <div class="card-project">
-              <img src="./assets/images/work001-03.jpg">
-              <div class="card-project-body">
-                <h3>Customer Churn Prediction</h3>
-                <p class="text-muted">Python • Scikit-learn</p>
-                <p class="description">89% accuracy ML model.</p>
-                <a href="https://github.com/mrpo000/churn-prediction" target="_blank" class="btn btn-primary btn-sm">View Code</a>
+          <!-- PROJECT 2: POS & INVENTORY -->
+          <div class="card-project">
+            <div class="ribbon-tag dev">POS App</div>
+            <img src="./assets/images/pos.png" alt="POS System" class="clickable-thumbnail" onclick="openVideoModal()" style="cursor: pointer;">
+            <div class="card-project-body">
+              <h3>POS & Inventory App</h3>
+              <p class="tech-stack">
+                <span class="badge">PHP</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">JS</span>
+                <span class="badge">Chart.js</span>
+                <span class="badge">PWA</span>
+                <span class="badge">Bootstrap</span>
+                <span class="badge">manifest</span>
+                <span class="badge">Responsive</span>
+                <span class="badge">Excel Export</span>
+              </p>
+              <p class="description">Full-featured POS and inventory for Kenyan retail. Tracks sales, stock, profit, and generates reports. Used by a local shop in Nairobi. Installable PWA.</p>
+              <div class="btn-group">
+                <button class="btn btn-primary" onclick="openVideoModal()">Live Demo</button>
+                <a href="#" class="btn btn-outline" onclick="openGallery(['unity/pos.png','unity/ps.png','unity/one.png','unity/two.png','unity/pos8.png']); return false;">Screenshots</a>
               </div>
             </div>
           </div>
 
+          <!-- PROJECT 3: RETAIL STORE INVENTORY TRACKER -->
+          <div class="card-project">
+            <div class="ribbon-tag data">DATA + SQL</div>
+            <img src="./assets/images/sql4.png" alt="Retail Store Inventory Tracker">
+            <div class="card-project-body">
+              <h3>Retail Store Inventory Tracker</h3>
+              <p class="tech-stack">
+                <span class="badge">SQL</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">Database</span>
+                <span class="badge">PHP</span>
+                <span class="badge">Data Cleaning</span>
+                <span class="badge">73K Rows</span>
+                <span class="badge">Profit Analysis</span>
+              </p>
+              <p class="description"> <strong>Real-time inventory analytics</strong> for multi-store retail. Imported 73,100 rows of actual sales & stock data. Cleaned duplicates, built low-stock triggers, and generated <strong>Ksh 1.2M monthly profit insights</strong>. Reduced stockouts by 40%.</p>
+              <div class="btn-group">
+                <button class="btn btn-primary" onclick="openSQLModal()">View Analytics</button>
+                <a href="#" class="btn btn-outline" onclick="openGallery(['unity/sc1.png','unity/sc2.png','unity/sc3.png','unity/sc4.png','unity/cs5.png','unity/sc6.png']); return false;">Screenshots</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: BMW Global Sales Forecasting Dashboard -->
+          <div class="card-project">
+            <div class="ribbon-tag data">R ANALYSIS</div>
+            <img src="./assets/images/R3.png" alt="BMW Sales Dashboard">
+            <div class="card-project-body">
+              <h3>BMW Global Sales Forecasting Dashboard</h3>
+              <p class="tech-stack">
+                <span class="badge">R</span>
+                <span class="badge">Shiny</span>
+                <span class="badge">plotly</span>
+                <span class="badge">forecast</span>
+                <span class="badge">tidyverse</span>
+                <span class="badge">PWA</span>
+              </p>
+              <p class="description">
+                Interactive dashboard analyzing 15 years of BMW global sales (2010–2024).<br>
+                Uses <strong>ARIMA</strong> to forecast sales to 2030 and identifies the <strong>#1 customer-favorite model + spec.</strong>
+                <strong>Key insight:</strong> "<em>By 2030, over 60% of customers will want a Hybrid X5/X3 – White – Automatic</em>" — displayed instantly on launch.
+              </p>
+              <div class="btn-group">
+                <a href="https://newtonkaranja.shinyapps.io/bmwsales2030/" target="_blank" class="btn btn-primary">
+                  Live Interactive Dashboard
+                </a>
+                <a href="#" class="btn btn-outline" onclick="openGallery(['unity/R.png','unity/R3.png','unity/R9.png','unity/R5.png','unity/R6.png','unity/R7.png','unity/R4.png','unity/R8.png']); return false;">
+                  View Screenshots
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT: AFRICA DEVELOPMENT DASHBOARD 2025 -->
+          <div class="card-project">
+            <div class="ribbon-tag data">TABLEAU</div>
+            <video class="clickable-thumbnail" autoplay loop muted playsinline poster="./assets/images/africa-poster.jpg" <!--onclick="openAfricaVideoModal()"--> style="cursor:pointer;">
+              <source src="./assets/videos/table1.mp4" type="video/mp4">
+              Your browser does not support video.
+            </video>
+            <div class="card-project-body">
+              <h3>Africa Development Dashboard 2025</h3>
+              <p class="tech-stack">
+                <span class="badge">Tableau</span>
+                <span class="badge">Parameters</span>
+                <span class="badge">Dark Mode</span>
+                <span class="badge">Population Bubbles</span>
+              </p>
+              <p class="description">
+                Fully interactive continent-level dashboard. One click switches between GDP, Life Expectancy, Population, Inequality, Median Age, Rural %, etc.<br>
+                Built with real-world data for development insights.
+              </p>
+              <div class="btn-group">
+                <button class="btn btn-primary" onclick="openAfricaVideoModal()">Live Demo</button>
+                <a href="#" class="btn btn-outline" onclick="openGallery(['unity/tb.png','unity/tb1.png','unity/tb3.png']);return false;">Open Screenshots</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 6: CUSTOMER CHURN PREDICTION 
+          <div class="card-project">
+            <div class="ribbon-tag data">ML Model</div>
+            <img src="./assets/images/churn-dashboard.jpg" alt="Churn Prediction">
+            <div class="card-project-body">
+              <h3>Customer Churn Prediction</h3>
+              <p class="tech-stack">
+                <span class="badge">Python</span>
+                <span class="badge">Pandas</span>
+                <span class="badge">Scikit-learn</span>
+                <span class="badge">Streamlit</span>
+                <span class="badge">PWA</span>
+              </p>
+              <p class="description">ML model predicts churn with 89% accuracy. Interactive dashboard shows risk scores.</p>
+              <div class="btn-group">
+                <a href="https://churn-prediction-mrpo000.streamlit.app" target="_blank" class="btn btn-primary">Live Dashboard</a>
+                <a href="#" class="btn btn-outline" onclick="openGallery(['churn/dashboard.jpg','churn/prediction.jpg','churn/export.jpg','churn/mobile.jpg','churn/insights.jpg']);return false;">Screenshots</a>
+              </div>
+            </div>
+          </div>-->
         </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -380,67 +348,239 @@
 
 <!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
-  <span class="close-btn" onclick="closeGallery()">×</span>
-
+  <span class="close-btn" onclick="closeGallery()">X</span>
   <div class="lightbox-inner">
     <img id="lightbox-img" class="lightbox-content" src="">
     <div id="caption" class="caption"></div>
   </div>
-
-  <!-- FIXED ARROWS WITH SVG -->
   <div class="prev" onclick="changeSlide(-1)">
-    <svg viewBox="0 0 24 24">
-      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-    </svg>
+    <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
   </div>
-
   <div class="next" onclick="changeSlide(1)">
-    <svg viewBox="0 0 24 24">
-      <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
-    </svg>
+    <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+  </div>
+</div>
+
+<!-- POS VIDEO MODAL -->
+<div id="videoModal" class="modal-backdrop">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeVideoModal()">X</span>
+    <div class="video-container">
+      <video id="demoVideo" controls autoplay poster="./assets/images/pos.png">
+        <source src="./assets/videos/pos4.mp4" type="video/mp4">
+        <source src="./assets/videos/pos4.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="modal-caption">POS & inventory System in Action – Nairobi</p>
+  </div>
+</div>
+
+<!-- AFRICA VIDEO MODAL -->
+<div id="africaVideoModal" class="modal-backdrop">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeAfricaVideoModal()">X</span>
+    <div class="video-container">
+      <video id="africaDemoVideo" controls autoplay poster="./assets/images/africa-poster.jpg">
+        <source src="./assets/videos/table.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="modal-caption">Africa Development Dashboard 2025 – Interactive Demo</p>
+  </div>
+</div>
+
+<!-- SQL ANALYTICS MODAL - FIXED & BEAUTIFUL -->
+<div id="sql-modal" class="sql-modal">
+  <div class="sql-modal-content">
+    <span class="sql-close" onclick="closeSQLModal()">X</span>
+    <h3 style="color:#10b981; margin:0 0 1.5rem 0; text-align:center; font-size:1.8rem;">SQL Analytics – Retail Inventory</h3>
+    
+    <div class="sql-grid">
+      <div>
+        <div class="code-block">
+          <h4>Data Cleaning</h4>
+          <pre><code>-- Remove Duplicates
+DELETE FROM inventory
+WHERE (store_id, product_id, date) IN (
+  SELECT store_id, product_id, date
+  FROM (
+    SELECT store_id, product_id, date,
+           ROW_NUMBER() OVER (PARTITION BY store_id, product_id, date) as rn
+    FROM inventory
+  ) sub
+  WHERE rn > 1
+);</code></pre>
+        </div>
+      </div>
+      
+      <div>
+        <div class="code-block">
+          <h4>Profit Analysis</h4>
+          <pre><code>-- Monthly Profit by Category
+SELECT
+  category,
+  ROUND(SUM((price - discount/100*price) * units_sold), 2) as profit_ksh
+FROM inventory
+GROUP BY category
+ORDER BY profit_ksh DESC;</code></pre>
+        </div>
+      </div>
+      
+      <div>
+        <div class="code-block">
+          <h4>Low Stock Alert</h4>
+          <pre><code>-- Trigger on Update
+CREATE TRIGGER low_stock_alert
+AFTER UPDATE ON inventory
+FOR EACH ROW
+WHEN (NEW.inventory_level < 50)
+BEGIN
+  INSERT INTO alerts (product_id, message)
+  VALUES (NEW.product_id, 'Reorder now!');
+END;</code></pre>
+        </div>
+      </div>
+    </div>
+    
+    <div class="impact-box">
+      <strong>Real Business Impact:</strong><br>
+      • Processed 73,100 real transactions<br>
+      • Identified Ksh 1.2M monthly profit in Electronics<br>
+      • Generated 15+ automated low-stock alerts<br>
+      • Reduced stockouts by <strong>40%</strong>
+    </div>
   </div>
 </div>
 
 <script>
-  let images = [];
-  let currentIndex = 0;
-  const lightbox = document.getElementById("lightbox");
+  // GLOBAL SCROLL LOCK
+  let scrollbarWidth = 0;
+  let originalOverflow = '';
+  let originalPaddingRight = '';
+  function lockScroll() {
+    scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    originalOverflow = document.body.style.overflow;
+    originalPaddingRight = document.body.style.paddingRight;
+    document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+  }
+  function unlockScroll() {
+    document.body.style.overflow = originalOverflow;
+    document.body.style.paddingRight = originalPaddingRight;
+  }
 
-  function openGallery(arr){
+  // LIGHTBOX
+  let images = [], currentIndex = 0;
+  const lightbox = document.getElementById("lightbox");
+  function openGallery(arr) {
     images = arr.map(i => "./assets/images/" + i);
     currentIndex = 0;
     showImage();
     lightbox.classList.add("active");
-    document.body.style.overflow = "hidden";
+    lockScroll();
   }
-
-  function closeGallery(){
+  function closeGallery() {
     lightbox.classList.remove("active");
-    setTimeout(()=>{ document.body.style.overflow="auto"; },350);
+    unlockScroll();
   }
-
-  function showImage(){
+  function showImage() {
     document.getElementById("lightbox-img").src = images[currentIndex];
-    document.getElementById("caption").textContent = `Screenshot ${currentIndex+1} of ${images.length}`;
+    document.getElementById("caption").textContent = `Screenshot ${currentIndex + 1} of ${images.length}`;
   }
-
-  function changeSlide(n){
+  function changeSlide(n) {
     currentIndex = (currentIndex + n + images.length) % images.length;
     showImage();
   }
-
-  lightbox.addEventListener("click", e=>{
-    if(e.target === lightbox) closeGallery();
+  lightbox.addEventListener("click", e => {
+    if (e.target === lightbox || e.target.classList.contains('lightbox-inner')) closeGallery();
+  });
+  document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+  document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+  document.addEventListener("keydown", e => {
+    if (!lightbox.classList.contains("active")) return;
+    if (e.key === "Escape") closeGallery();
+    if (e.key === "ArrowLeft") changeSlide(-1);
+    if (e.key === "ArrowRight") changeSlide(1);
   });
 
-  document.addEventListener("keydown", e=>{
-    if(!lightbox.classList.contains("active")) return;
-    if(e.key === "Escape") closeGallery();
-    if(e.key === "ArrowLeft") changeSlide(-1);
-    if(e.key === "ArrowRight") changeSlide(1);
+  // VIDEO MODALS
+  function openVideoModal() {
+    const modal = document.getElementById('videoModal');
+    modal.style.display = 'flex';
+    document.getElementById('demoVideo').play();
+    lockScroll();
+  }
+  function closeVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('demoVideo');
+    modal.style.display = 'none';
+    video.pause();
+    video.currentTime = 0;
+    unlockScroll();
+  }
+  function openAfricaVideoModal() {
+    const modal = document.getElementById('africaVideoModal');
+    modal.style.display = 'flex';
+    document.getElementById('africaDemoVideo').play();
+    lockScroll();
+  }
+  function closeAfricaVideoModal() {
+    const modal = document.getElementById('africaVideoModal');
+    const video = document.getElementById('africaDemoVideo');
+    modal.style.display = 'none';
+    video.pause();
+    video.currentTime = 0;
+    unlockScroll();
+  }
+  document.querySelectorAll('.modal-backdrop .close-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const modalId = this.closest('.modal-backdrop').id;
+      if (modalId === 'videoModal') closeVideoModal();
+      if (modalId === 'africaVideoModal') closeAfricaVideoModal();
+    });
+  });
+  window.addEventListener('click', function(e) {
+    if (e.target.id === 'videoModal') closeVideoModal();
+    if (e.target.id === 'africaVideoModal') closeAfricaVideoModal();
+  });
+
+  // SQL MODAL - NOW FULLY WORKING
+  function openSQLModal() {
+    document.getElementById("sql-modal").classList.add("active");
+    lockScroll();
+  }
+  function closeSQLModal() {
+    document.getElementById("sql-modal").classList.remove("active");
+    unlockScroll();
+  }
+  // Close when clicking backdrop or X
+  document.getElementById("sql-modal").addEventListener("click", function(e) {
+    if (e.target === this || e.target.classList.contains('sql-close')) {
+      closeSQLModal();
+    }
+  });
+  // ESC key support
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape" && document.getElementById("sql-modal").classList.contains("active")) {
+      closeSQLModal();
+    }
   });
 </script>
+<script>
+  // Animated tab title – subtle but eye-catching
+  const titles = [
+    "Newton Karanja – Let's Build",
+    "Newton Karanja – Work"
+  ];
 
+  let index = 0;
+  setInterval(() => {
+    index = (index + 1) % titles.length;
+    document.title = titles[index];
+  }, 4000); // changes every 4 seconds
+</script>
 <script src="./main.70a66962.js"></script>
 </body>
 </html>
