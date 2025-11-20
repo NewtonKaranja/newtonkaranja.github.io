@@ -149,10 +149,10 @@
 .navbar-nav > li > a {
   font-weight: 500 !important;
 }
-/* Better button spacing on mobile only */
+	  /* Better button spacing on mobile only */
 @media (max-width: 576px) {
   .btn-group {
-    margin-top: -3.5rem !important;   /* overrides the -3rem on small screens */
+    margin-top: 0rem !important;   /* overrides the -3rem on small screens */
     flex-direction: flex;          /* stack buttons vertically */
              /* full-width buttons */
     gap: 0.75rem;                    /* nice vertical spacing */
@@ -288,9 +288,9 @@
                 <span class="badge">PWA</span>
               </p>
               <p class="description">
-                Interactive dashboard analyzing 15 years of BMW global sales (2010–2024).<br>
+                Interactive dashboard analyzing 15 years of BMW global sales (2010–2024).
                 Uses <strong>ARIMA</strong> to forecast sales to 2030 and identifies the <strong>#1 customer-favorite model + spec.</strong>
-                <strong>Key insight:</strong> "<em>By 2030, over 60% of customers will want a Hybrid X5/X3 – White – Automatic</em>" — displayed instantly on launch.
+                <strong>Key insight:</strong> "<em>By 2030, over 60% of customers will want a Hybrid X5/X3 – White </em>" 
               </p>
               <div class="btn-group">
                 <a href="https://newtonkaranja.shinyapps.io/bmwsales2030/" target="_blank" class="btn btn-primary">
@@ -303,7 +303,10 @@
             </div>
           </div>
 
-                    <!-- PROJECT: AFRICA DEVELOPMENT DASHBOARD 2025 – INSTANT AUTO-PLAY VERSION -->
+          <!-- PROJECT: AFRICA DEVELOPMENT DASHBOARD 2025 -->
+                    <!-- PROJECT: AFRICA DEVELOPMENT DASHBOARD 2025 – INSTANT LOAD VERSION -->
+                   <!-- PROJECT: AFRICA DEVELOPMENT DASHBOARD 2025 – INSTANT AUTO-PLAY VERSION -->
+          <!-- PROJECT: AFRICA DEVELOPMENT DASHBOARD 2025 – INSTANT AUTO-PLAY VERSION -->
           <div class="card-project">
             <div class="ribbon-tag data">TABLEAU</div>
 
@@ -313,10 +316,16 @@
               <div style="position:absolute; inset:0; background:url('./assets/images/africa-poster.jpg') center/cover no-repeat; z-index:1;"></div>
               
               <!-- 2. Real video – tiny file + optimized settings = instant start -->
-              <video width="100%" height="220" autoplay loop muted playsinline preload="auto" poster="./assets/images/africa-poster.jpg" style="position:relative;z-index:2;width:100%;height:220px;object-fit:cover;display:block;">
-<source src="./assets/videos/table1.mp4?v=1.0" type="video/mp4">
-<source src="./assets/videos/table1-optimized.mp4?v=1.0" type="video/mp4">
-</video>
+              <video width="100%" height="220" 
+                     autoplay loop muted playsinline
+                     preload="auto"
+                     poster="./assets/images/africa-poster.jpg"
+                     style="position:relative; z-index:2; width:100%; height:220px; object-fit:cover; display:block;"
+                     <!--onclick="openAfricaVideoModal()"-->>
+                <source src="./assets/videos/table1.mp4" type="video/mp4">
+                <!-- Fallback: tiny optimized version (rename your compressed file to this) -->
+                <source src="./assets/videos/table1-optimized.mp4" type="video/mp4">
+              </video>
 
               <!-- Optional subtle play icon overlay (disappears after 1s) -->
               <!--<div id="play-icon-overlay" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); 
@@ -615,16 +624,6 @@ END;</code></pre>
     index = (index + 1) % titles.length;
     document.title = titles[index];
   }, 4000); // changes every 4 seconds
-</script>
-<script>
-// FORCE immediate loading for Africa video
-document.addEventListener("DOMContentLoaded", () => {
-const vid = document.querySelector("video[poster='./assets/images/africa-poster.jpg']");
-if (vid) {
-vid.load();
-vid.play().catch(()=>{});
-}
-});
 </script>
 <script src="./main.70a66962.js"></script>
 </body>
