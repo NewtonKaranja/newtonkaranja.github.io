@@ -16,10 +16,23 @@
   <link href="./assets/favicon.ico" rel="icon">
 
   <title>Newton</title>  
-  <link rel="icon" type="image/x-icon" href="./assets/images/star.png">
+  <link rel="icon" type="image/x-icon" href="./assets/images/sys6.png">
 
 <link href="./main.3f6952e4.css" rel="stylesheet"></head>
-
+<style>
+    body, p, li { font-weight: 500 !important; font-size: 1.1rem !important; line-height: 1.8; }
+    h3 { font-size: 1.6rem; margin: 2.2rem 0 1rem; color: #222; }
+    .navbar-nav > li > a { font-weight: 500 !important; }
+    ul { padding-left: 1.4rem; }
+    li { margin-bottom: .6rem; }
+    .profile-img {
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.15);
+      max-width: 100%;
+      transition: transform .4s;
+    }
+	
+</style>
 <body class="">
 <div id="site-border-left"></div>
 <div id="site-border-right"></div>
@@ -41,7 +54,7 @@
           <li><a href="./index.html" title="">01 : Home</a></li>
           <li><a href="./works.html" title="">02 : Works</a></li>
           <li><a href="./about.html" title="">03 : About me</a></li>
-          <li><a href="./contact.html" title="">04 : Contact</a></li>
+          <li><a href="./contact.html" title=""><b>04 : Contact</b></a></li>
           <!--<li><a href="./components.html" title="">05 : Components</a></li>-->
         </ul>
 
@@ -101,9 +114,8 @@
                       <a href="https://www.facebook.com/gibson.newton/" title="facebook" class="fa-icon">
                         <i class="fa fa-facebook"></i>
                       </a>
-                      <a href="https://twitter.com/mrpo000" title="X (formerly Twitter)" class="fa-icon">
-                        <i class="fa fa-twitter"></i>
-                      </a>
+                      
+
                       <a href="https://www.linkedin.com/in/gibson-newton%F0%9F%90%93-95106a206/" title="Linkedin" class="fa-icon">
                         <i class="fa fa-linkedin"></i>
                       </a>
@@ -115,6 +127,9 @@
                         <i class="fa fa-whatsapp"></i>
 						</a>
 						
+						<a href="#" title="GitHub" class="fa-icon">
+    <i class="fa fa-github"></i>
+</a>
 
 
                     </div>
@@ -159,6 +174,21 @@
   ga('send', 'pageview');
 </script>
 
---> <script type="text/javascript" src="./main.70a66962.js"></script></body>
+--> 
+<script>
+  // Animated tab title – subtle but eye-catching
+  const titles = [
+    "Newton Karanja – Let's Build",
+    "Newton Karanja – Contact"
+  ];
+
+  let index = 0;
+  setInterval(() => {
+    index = (index + 1) % titles.length;
+    document.title = titles[index];
+  }, 4000); // changes every 4 seconds
+</script>
+
+<script type="text/javascript" src="./main.70a66962.js"></script></body>
 
 </html>
