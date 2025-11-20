@@ -149,6 +149,22 @@
 .navbar-nav > li > a {
   font-weight: 500 !important;
 }
+	  /* Better button spacing on mobile only */
+@media (max-width: 576px) {
+  .btn-group {
+    margin-top: -3.5rem !important;   /* overrides the -3rem on small screens */
+    flex-direction: flex;          /* stack buttons vertically */
+             /* full-width buttons */
+    gap: 0.75rem;                    /* nice vertical spacing */
+  }
+  
+  .btn-group .btn {
+                       /* full-width buttons on mobile */
+    
+    padding: 0.75rem 1rem !important; /* slightly taller tap target */
+    font-size: 1rem !important;
+  }
+}
   </style>
 </head>
 <body>
