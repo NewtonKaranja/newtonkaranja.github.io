@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="Portfolio of Newton Karanja – Full Stack Developer & Data Analyst from Kenya" name="description">
+  <meta content="description" name="description">
   <meta name="google" content="notranslate" />
-  <meta content="Mashup templates have been developped by Newton" name="author">
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
   <meta name="msapplication-tap-highlight" content="no">
  
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
@@ -29,26 +29,56 @@
     }
 
     /* TOAST BASE STYLE */
-    .toast {
-      position: fixed;
-      top: -100px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 16px 32px;
-      border-radius: 8px;
-      font-weight: 500;
-      font-size: 1.1rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      z-index: 9999;
-      opacity: 0;
-      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-      white-space: nowrap;
-      text-align: center;
-    }
-    .toast.show {
-      top: 30px;
-      opacity: 1;
-    }
+    /* TOAST BASE STYLE – Desktop (unchanged) */
+.toast {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.toast.show {
+  top: 30px;
+  opacity: 1;
+}
+
+/* MOBILE: Wide, 2-row, beautiful toast */
+@media (max-width: 767px) {
+  .toast {
+    white-space: normal;                  /* allow wrapping */
+    max-width: 92vw;                      /* almost full width */
+    width: 92vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 18px 24px;                   /* generous padding */
+    font-size: 1.05rem;
+    line-height: 1.6;
+    border-radius: 12px;                  /* slightly rounder */
+  }
+  
+  .toast.show {
+    top: 24px;                            /* a bit closer to top on mobile */
+  }
+
+  /* Force the two messages to look perfectly balanced over 2 lines */
+  #successToast,
+  #errorToast {
+    min-height: 68px;                     /* gives consistent 2-row height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
     /* SUCCESS TOAST — YOUR ORIGINAL SOFT GREEN */
     #successToast {
@@ -149,7 +179,7 @@
                       <a href="https://wa.me/254799118054" title="whatsapp" class="fa-icon" target="_blank">
                         <i class="fa fa-whatsapp"></i>
                       </a>
-                      <a href="https://github.com/NewtonKaranja" title="GitHub" class="fa-icon" target="_blank">
+                      <a href="https://github.com/YourUsername" title="GitHub" class="fa-icon" target="_blank">
                         <i class="fa fa-github"></i>
                       </a>
                     </div>
